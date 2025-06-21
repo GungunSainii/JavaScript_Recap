@@ -6,24 +6,24 @@ console.log(3
     +
      3) // code readability should be high
 
-console.log("Hitesh")
-
+console.log("Hitesh") //prettier also helps to write clean code
+// JS Docx - tc39.es and mdn
 
 let name = "hitesh"
 let age = 18
 let isLoggedIn = false
-let state;
+let state; //undefined
 
 // number => 2 to power 53
 // bigint
 // string => ""
 // boolean => true/false
-// null => standalone value
+// null => standalone value //not undefined like temp of city not available 
 // undefined => 
-// symbol => unique
+// symbol => unique //to find unique element in react or figma
 
 
 // object
 
 console.log(typeof undefined); // undefined
-console.log(typeof null); // object
+console.log(typeof null); // object //Lang issue
