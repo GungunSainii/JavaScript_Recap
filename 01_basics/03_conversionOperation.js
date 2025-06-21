@@ -9,7 +9,7 @@ let valueInNumber = Number(score)
 
 
 // "33" => 33
-// "33abc" => NaN
+// "33abc" => NaN //Thats why it showed number as its datatype
 //  true => 1; false => 0
 
 let isLoggedIn = "hitesh"
@@ -46,19 +46,21 @@ let str2 = " hitesh"
 let str3 = str1 + str2
 // console.log(str3);
 
-// console.log("1" + 2);
-// console.log(1 + "2");
-// console.log("1" + 2 + 2);
-// console.log(1 + 2 + "2");
+// console.log("1" + 2); //12
+// console.log(1 + "2"); //12
+// console.log("1" + 2 + 2); //122
+// console.log(1 + 2 + "2"); //32
 
-// console.log( (3 + 4) * 5 % 3);
+//Prefer type concersion docx
 
-// console.log(+true);
-// console.log(+"");
+// console.log( (3 + 4) * 5 % 3); //Use parenthesis
+
+// console.log(+true); //1 "+" = convertor
+// console.log(+""); //0
 
 let num1, num2, num3
 
-num1 = num2 = num3 = 2 + 2
+num1 = num2 = num3 = 2 + 2 //Not prefer 
 
 let gameCounter = 100
 ++gameCounter;
