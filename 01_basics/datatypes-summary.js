@@ -40,3 +40,11 @@ console.log(typeof anotherId);
 //Identify the return type of these datatype
 
 // https://262.ecma-international.org/5.1/#sec-11.4.3
+
+/*
+
+ Types of memory - stack (Primitive ) and Heap (Non - Primitive)
+ Stack : getting Copy of variable
+ Heap : Point to original value
+
+*/
