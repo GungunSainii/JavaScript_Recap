@@ -1,4 +1,4 @@
-// singleton
+// singleton - while creating object using constructor
 // Object.create
 
 // object literals
@@ -9,7 +9,7 @@ const mySym = Symbol("key1")
 const JsUser = {
     name: "Hitesh",
     "full name": "Hitesh Choudhary",
-    [mySym]: "mykey1",
+    [mySym]: "mykey1", //Symbol
     age: 18,
     location: "Jaipur",
     email: "hitesh@google.com",
@@ -32,7 +32,8 @@ JsUser.greeting = function(){
 }
 JsUser.greetingTwo = function(){
     console.log(`Hello JS user, ${this.name}`);
-}
+} //Same obj ref use "this"
 
-console.log(JsUser.greeting());
+console.log(JsUser.greeting()); 
+// console.log(JsUser.greeting); //Just prints that it is fxn
 console.log(JsUser.greetingTwo());
