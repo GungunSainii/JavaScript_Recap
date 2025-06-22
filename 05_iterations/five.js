@@ -1,5 +1,12 @@
 const coding = ["js", "ruby", "java", "python", "cpp"]
 
+
+// A higher-order function is a function that does one of the following:
+
+// Takes another function as an argument.
+// Returns another function as its result.
+
+
 // coding.forEach( function (val){
 //     console.log(val);
 // } )

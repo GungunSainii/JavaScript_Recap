@@ -23,4 +23,4 @@ for (const key in programming) {
 
 // for (const key in map) {
 //     console.log(key);
-// }
+// } As MAPS ARE NOT ITERABLE NOT APPLICABLE

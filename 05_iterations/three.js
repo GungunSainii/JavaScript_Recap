@@ -15,6 +15,8 @@ for (const greet of greetings) {
 }
 
 // Maps
+// Object hold key value pair 
+//No duplicate value
 
 const map = new Map()
 map.set('IN', "India")
@@ -28,6 +30,7 @@ map.set('IN', "India")
 for (const [key, value] of map) {
     // console.log(key, ':-', value);
 }
+//destructure to print key and value 
 
 const myObject = {
     game1: 'NFS',
@@ -37,4 +40,4 @@ const myObject = {
 // for (const [key, value] of myObject) {
 //     console.log(key, ':-', value);
     
-// }
+// } NOT Applicable for objects
