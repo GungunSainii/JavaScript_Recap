@@ -13,11 +13,11 @@ const user = {
 // user.username = "sam"
 // user.welcomeMessage()
 
-// console.log(this);
+// console.log(this); Empty as we are on node
 
 // function chai(){
 //     let username = "hitesh"
-//     console.log(this.username);
+//     console.log(this.username); Undefined as not works in fxn
 // }
 
 // chai()
@@ -40,10 +40,11 @@ const chai =  () => {
 // }
 
 // const addTwo = (num1, num2) =>  num1 + num2
+// Implicit statemennt: no need to write return as its a single statement
 
 // const addTwo = (num1, num2) => ( num1 + num2 )
 
-const addTwo = (num1, num2) => ({username: "hitesh"})
+const addTwo = (num1, num2) => ({username: "hitesh"}) 
 
 
 console.log(addTwo(3, 4))
@@ -51,4 +52,4 @@ console.log(addTwo(3, 4))
 
 // const myArray = [2, 5, 3, 7, 8]
 
-// myArray.forEach()
+// myArray.forEach(() => {})
