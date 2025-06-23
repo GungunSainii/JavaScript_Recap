@@ -24,6 +24,7 @@
         const li = document.createElement('li');
         li.appendChild(document.createTextNode(langName))
         document.querySelector('.language').appendChild(li)
+        //Avoid tree transerving here
     }
     addOptiLanguage('golang')
 

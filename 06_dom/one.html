@@ -29,3 +29,53 @@
     </div>
 </body>
 </html>
+
+//escalidraw
+
+/*
+DOM - Html elements to nodes in js
+Window - object 
+Console.log(document or window.document) same hai
+Or console.dir(document) To get more info 
+
+Diagram---
+Window -- document -- Html -- head 
+                                --title
+                                    --text node
+                                --meta
+                                    --attribute 
+                            --Body
+                                --div(attribute)
+                                    --h1 
+                                        --attribute
+                                        -- text node
+                                    --p
+                                        --text nodes
+
+
+document.getElementById('').innerHtml = "<h1></h1>" Many more methods
+
+Selecting Element -----
+- getElementById('').methods {class No , className yes}
+.methods = .getAttribute('') //Key pass get value
+.methods = setAttribute('attribute','value') //It overwrites the prev value of attribute
+.methods = .style.padding = '15px'
+.textContent- display every text in that object even those hidden by css style
+.innerHTML- display the the tags as well with content 
+.innerText- display text which is visible 
+
+- getElementsByClassName('')
+--gives html collection
+
+- querySelector('') - only gives 1st value of that tag
+--supports all css tags
+
+- querySelectorAll('') - gives all elements of tag
+html collection and node list is not pure array Check its prototype for methods
+--we can apply style too by accessing the specific element in impure array ALWAYS
+
+Node list and HTML collecction convert to array to use array methods 
+Array.from(pass html collection or node list)
+
+
+*/
