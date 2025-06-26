@@ -67,12 +67,13 @@ Selecting Element -----
 - getElementsByClassName('')
 --gives html collection
 
-- querySelector('') - only gives 1st value of that tag
+- querySelector('html tag/css selectors') - only gives 1st value of that tag
 --supports all css tags
 
 - querySelectorAll('') - gives all elements of tag
 html collection and node list is not pure array Check its prototype for methods
---we can apply style too by accessing the specific element in impure array ALWAYS
+--BUT we can apply style too by accessing the specific element in impure array ALWAYS
+-- Major difference bwt queryselector and query querySelectorAll
 
 Node list and HTML collecction convert to array to use array methods 
 Array.from(pass html collection or node list)
