@@ -12,7 +12,7 @@
             <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
             <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
             <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
-            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""  ></li> //Don't inject event in tag why ? Beacause its not scable
             <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
             <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
         </ul>
@@ -21,43 +21,91 @@
 <script>
     // document.getElementById('owl').onclick = function(){
     //     alert("owl clicked")
-    // }
+    // } (Didn't provide propagation)
 
-     // attachEvent()
-    // jQuery - on
-
-    // type, timestamp, defaultPrevented
-    // target, toElement, srcElement, currentTarget,
-    // clientX, clientY, screenX, screenY
-    // altkey, ctrlkey, shiftkey, keyCode
+    // Earlier 
+    // attachEvent()
+    // jQuery framework of JS - on
 
     // document.getElementById('images').addEventListener('click', function(e){
     //     console.log("clicked inside the ul");
     // }, false)
 
-    // document.getElementById('owl').addEventListener('click', function(e){
-    //     console.log("owl clicked");
-    //     e.stopPropagation()
-    // }, false)
+    // add 
+    document.getElementById('owl').addEventListener('click', function(e){
+        console.log(e); 
+        // console.log("owl clicked");
+        // e.stopPropagation(); --> To stop the propagation
+    }, false) 
+    
     
     // document.getElementById('google').addEventListener('click',function(e){
-    //     e.preventDefault();
+    //     e.preventDefault(); --> default behaviour of fxn
     //     e.stopPropagation()
     //     console.log("google clicked");
     // }, false)
    
     
-    document.querySelector('#images').addEventListener('click', function(e){
-        console.log(e.target.tagName);
-        if (e.target.tagName === 'IMG') {
-            console.log(e.target.id);
-            let removeIt = e.target.parentNode
-            removeIt.remove()
-        }
-    
-        
-    })
+    // document.querySelector('#images').addEventListener('click', function(e){
+        // console.log(e.target.tagName);
+        // if (e.target.tagName === 'IMG') {
+        //     console.log(e.target.id);
+        //     let removeIt = e.target.parentNode
+        //     removeIt.remove()
+        // }  
+    // })
     
     //removeIt.parentNode.removeChild(removeIt)
 </script>
 </html>
+
+/*
+In javascript Events - sequentially run
+exception - asyn method we perform 
+
+isTrusted means a boolean value true - action driven and false - asynchronous (click is the exception here for the boolean value)
+
+-----
+
+    // Event Propagation --> *default (false)event bubbling and event capturing 
+    // Event bubbling - from big to small analogy bubbles tracks in similar way 
+    // Tracks from inside to outside --> event propagation (bubbling)
+    // Trcaks from outside to inside --> event propagation(capturing)
+
+------
+type: 'click',
+
+timestamp: returns the time (milliseconds), defaultPrevented: returns a boolean value indicating whether or not the call to Event.preventDefault() canceled the event.
+
+target: selects the target element of document,
+
+toElement: toElement would tell you which element the mouse pointer is now entering or has just entered (Not In Use). , 
+
+srcElement: is an alias for the Event.target property. Use Event.target instead. , 
+
+currentTarget: identifies the element to which the event handler has been attached ,
+
+clientX:  provides the horizontal coordinate within the application's viewport at which the event occurred (as opposed to the coordinate within the page),
+
+clientY: provides the horizontal coordinate within the application's viewport at which the event occurred (as opposed to the coordinate within the page), 
+
+screenX: provides the horizontal coordinate (offset) of the mouse pointer in screen coordinates.,
+
+-- Screen, Page, Viewport --
+-- ScreenY: monito screen
+-- ClientY: viewport screen (browser)
+-- Scroll  
+
+screenY: returns the vertical distance, in CSS pixels, of the top border of the user's browser viewport to the top edge of the screen ? ,
+
+altkey: is a boolean value that indicates whether the alt key was pressed or not when a given mouse event occurs , 
+
+ctrlkey: whether the ctrl key was pressed or not ,
+
+shiftkey: the shift key was pressed (true) or not (false), 
+
+keyCode: identifying the unmodified value of the pressed key.
+- The key property returns the key that was pressed when the event occured.
+- The key property is read-only.
+
+*/
