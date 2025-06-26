@@ -214,10 +214,11 @@ window.addEventListener('keydown', (e) => {
 //generate a random color
 
 const randomColor = function () {
-  const hex = '0123456789ABCDEF';
-  let color = '#';
-  for (let i = 0; i < 6; i++) {
-    color += hex[Math.floor(Math.random() * 16)];
+  const hex = '0123456789ABCDEF';//All possible values
+  let color = '#'; //Format color #RRGGBB
+  for (let i = 0; i < 6; i++) { //loop to get 6 values for hexadecimal
+    color += hex[Math.floor(Math.random() * 16)]; //color + hex[random index valued from 0 to 15 included] for 6 times to generate random color
+    console.log(color)
   }
   return color;
 };

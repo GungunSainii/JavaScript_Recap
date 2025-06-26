@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Repeat-Repeat</title>
+  </head>
+  <body>
+    <h1>Stop-Repeat</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    let counter = 1;
+    const start = document.getElementById("start");
+    const repeat = function () {
+      console.log(`Hello Member ${counter}`);
+      counter++;
+    };
+    const Interval = () => setInterval(repeat,5)
+    // console.log(Interval)
+    start.addEventListener("click", Interval
+    );
+
+    const stop = document.getElementById("stop");
+    const IntervalID = () => clearInterval(Interval)
+    
+    stop.addEventListener("click", IntervalID);
+  </script>
+</html>
