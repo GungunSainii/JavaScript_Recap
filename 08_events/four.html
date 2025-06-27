@@ -11,20 +11,29 @@
     <button id="stop">Stop</button>
   </body>
   <script>
+    let IntervalId;
     let counter = 1;
     const start = document.getElementById("start");
-    const repeat = function () {
+    const stop = document.getElementById("stop");
+
+    function repeat() {
       console.log(`Hello Member ${counter}`);
       counter++;
     };
-    const Interval = () => setInterval(repeat,5)
-    // console.log(Interval)
-    start.addEventListener("click", Interval
-    );
 
-    const stop = document.getElementById("stop");
-    const IntervalID = () => clearInterval(Interval)
+    function start_print()  {
+      IntervalId = setInterval(repeat,5);
+    }
     
-    stop.addEventListener("click", IntervalID);
+    
+    function stop_print() {
+      clearInterval(IntervalId);
+      IntervalId = null;
+    }
+
+    
+    
+    start.addEventListener("click", start_print);
+    stop.addEventListener("click", stop_print);
   </script>
 </html>

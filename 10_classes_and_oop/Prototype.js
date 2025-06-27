@@ -1,7 +1,7 @@
 // let myName = "hitesh     "
 // let mychannel = "chai     "
 
-// console.log(myName.trueLength);
+// console.log(myName.trueLength);//MyName.trim().length instead of this AIM: to create this trueLength method so it can be applied to every variable 
 
 
 let myHeros = ["thor", "spiderman"]

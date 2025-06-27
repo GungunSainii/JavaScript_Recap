@@ -2,7 +2,8 @@ function multipleBy5(num){
 
     return num*5
 }
-
+//function is also a object 
+//In JS is object
 multipleBy5.power = 2
 
 console.log(multipleBy5(5));
@@ -17,15 +18,17 @@ function createUser(username, score){
 createUser.prototype.increment = function(){
     this.score++
 }
+
 createUser.prototype.printMe = function(){
     console.log(`price is ${this.score}`);
 }
 
-const chai = new createUser("chai", 25)
+const chai = new createUser("chai", 25) //Significance of new keyword is that it tells the new features of that object 
 const tea = createUser("tea", 250)
 
 chai.printMe()
 
+//Javascript new keyword ke through constructor function dete hai
 
 /*
 

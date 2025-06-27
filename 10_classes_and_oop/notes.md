@@ -7,9 +7,10 @@
 - toLowerCase
 
 ## why use OOP
+- To avoid code sapegathe
 
 ## parts of OOP
-Object literal 
+Object literal~literal
 
 - Constructor function
 - Prototypes

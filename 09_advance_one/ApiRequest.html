@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body style="background-color: #212121;">
-    0	UNSENT	Client has been created. open() not called yet.
+0	UNSENT	Client has been created. open() not called yet.
 1	OPENED	open() has been called.
 2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
 3	LOADING	Downloading; responseText holds partial data.
@@ -14,16 +14,50 @@
 </body>
 <script>
     const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
-    const xhr = new XMLHttpRequest();
-    xhr.open('GET', requestUrl)
-    xhr.onreadystatechange = function(){
+    const xhr = new XMLHttpRequest(); //a class and create a obj from it
+    xhr.open('GET', requestUrl) //method to open 
+    xhr.onreadystatechange = function(){ //It takes function that what to when there is change of state 
         console.log(xhr.readyState);
         if (xhr.readyState === 4) {
-            const data = JSON.parse(this.responseText)
-            console.log(typeof data);
-            console.log(data.followers);
+            const data = JSON.parse(this.responseText) //this -- current context parse-->convert string to JSON 
+            console.log(typeof data); //response is in string 
+            console.log(data.followers);//So it is not a obj so it can't work
         }
     }
-    xhr.send();
+    xhr.send();// to call the open
 </script>
 </html>
+/*
+Api - mechanism to talk between two language or two servers 
+Api in form of JSon 
+Can be read using JSON formatter sites
+It took time to understand APIS
+---oLD---
+XMLHttpRequest -- USED to interact with servers and can retrieve data from url without having to do a full page refresh
+It ENABLE Upadate a part of page without reloading
+XML is heavily used in AJAX
+AJAX-- asynchronous javascript and XML
+its a approach to using a no of technos. when they combined in ajax model.Wen applications are able to make quick changes without reloading the entire browser page.
+can communicate, exchange data and update the page without reloading
+
+V8 -- gives everything and Node js 
+c++ core language and everything above it is a wrapper
+
+--TASK--
+//Fetch photo and show followers below it.
+
+- Wating - database value fetch or display or encription of crytographic value requires async programming 
+Usually done by asyn or await || Promises 
+Modern programming involves the use of Promises
+
+A Promise is in one of these states:
+
+- pending: initial state, neither fulfilled nor rejected.
+- fulfilled: meaning that the operation was completed successfully.
+- rejected: meaning that the operation failed.
+
+Promise -- The Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
+
+---------
+Bluebird vs Native in old time when there is not promises 
+*/
