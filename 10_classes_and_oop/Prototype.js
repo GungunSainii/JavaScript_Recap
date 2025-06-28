@@ -24,6 +24,12 @@ Array.prototype.heyHitesh = function(){
     console.log(`Hitesh says hello`);
 }
 
+/* We can inject functioins in prototype of our created objects or in a higher OBJ as well 
+Since fxn,array,string is a object so defining a fxn in Main OBJ prototype this power will be given to fxn,array and string as weel They can also access it 
+
+Object.prototype.hitesh = function (){} --> Available everywhere
+*/
+
 // heroPower.hitesh()
 // myHeros.hitesh()
 // myHeros.heyHitesh()
@@ -53,7 +59,7 @@ const TASupport = {
 Teacher.__proto__ = User
 
 // modern syntax
-Object.setPrototypeOf(TeachingSupport, Teacher)
+Object.setPrototypeOf(TeachingSupport, Teacher) //(to kiske , from kisko) Prototypal inheritance
 
 let anotherUsername = "ChaiAurCode     "
 

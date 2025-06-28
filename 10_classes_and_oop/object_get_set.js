@@ -3,7 +3,7 @@ const User = {
     _password: "abc",
 
 
-    get email(){
+    get email(){ //So get treat email as prop on which it has to get and overwrite bus 
         return this._email.toUpperCase()
     },
 
@@ -11,6 +11,6 @@ const User = {
         this._email = value
     }
 }
-
+// Weird syntax
 const tea = Object.create(User)
 console.log(tea.email);

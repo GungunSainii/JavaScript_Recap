@@ -19,13 +19,14 @@
                 .querySelector('button')
                 .addEventListener('click', this.handleClick.bind(this))
 
-        }
+        } //here first this reference to React handleclick() and BIND TO ADD REFERENCE of all other variables 
         handleClick(){
             console.log("button clicked");
-            console.log(this.server);
+            console.log(this.server); //this --> jisne call kiya button 
         }
     }
 
     const app = new React()
 </script>
 </html>
+<!-- -----DOUBT :(-------- -->

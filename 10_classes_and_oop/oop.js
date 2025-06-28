@@ -48,7 +48,7 @@ console.log(userOne.constructor);
 //Instance of (operator) --> do they same constructor function
 //---Prototypal behaviour---
 //Javascript behaviour -- never giving up which means it will seek for values in the above levels until it is NULL.Because of this nature only we see the use of {this} in some and not in arrow function, Inheritance also.
-//Prototype never ending 
+//Prototype never ending will
 
 
 

@@ -44,7 +44,7 @@
     //     function displayName() {
     //         console.log(name);
     //     }
-    //     return displayName;
+    //     return displayName; //Closure - fxn return krte ho toh ushka pura lexcical scope bhi return hota hai 
     // }
 
     // const myFunc = makeFunc();
@@ -58,7 +58,7 @@
         // document.getElementById("green").onclick = function(){
         //     document.body.style.backgroundColor = `green`
         // }
-
+//practical case 
         function clickHandler(color){
             // document.body.style.backgroundColor = `${color}`
 
@@ -67,7 +67,7 @@
             }
         }
 
-        document.getElementById('orange').onclick = clickHandler("orange")
+        document.getElementById('orange').onclick = clickHandler("orange") //as it expect function in return not execution of function directly
         document.getElementById('green').onclick = clickHandler("green")
 
     </script>
